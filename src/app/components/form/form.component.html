@@ -1,0 +1,226 @@
+<form [formGroup]="myForm" novalidate onsubmit="">
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>Groupe</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="group"
+      />
+      <mat-error *ngIf="myForm.controls['group'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Équipe</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="team"
+      />
+      <mat-error *ngIf="myForm.controls['team'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Essai</mat-label>
+      <mat-select formControlName="try">
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['try'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Distance (cm)</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="distance"
+        type="number"
+      />
+      <mat-error *ngIf="myForm.controls['distance'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>O Dep</mat-label>
+      <mat-select formControlName="oDep">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="45">45</mat-option>
+        <mat-option value="75">75</mat-option>
+        <mat-option value="200">200</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['oDep'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>P rt</mat-label>
+      <mat-select formControlName="pRt">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="45">45</mat-option>
+        <mat-option value="75">75</mat-option>
+        <mat-option value="200">200</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['pRt'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>O rec</mat-label>
+      <mat-select formControlName="oRec">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="75">75</mat-option>
+        <mat-option value="200">200</mat-option>
+        <mat-option value="300">300</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['oRec'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>S</mat-label>
+      <mat-select formControlName="S">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="100">100</mat-option>
+        <mat-option value="200">200</mat-option>
+        <mat-option value="350">350</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['S'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>T es (secondes)</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="tEs"
+        type="number"
+      />
+      <mat-error *ngIf="myForm.controls['tEs'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>X</mat-label>
+      <mat-select formControlName="x">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="1">1</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['x'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>Z</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="z"
+      />
+      <mat-error *ngIf="myForm.controls['z'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Y</mat-label>
+      <mat-select formControlName="y">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="1">1</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['y'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>M prot (grammes)</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="mProt"
+        type="number"
+      />
+      <mat-error *ngIf="myForm.controls['mProt'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>M tran (grammes)</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="mTran"
+        type="number"
+      />
+      <mat-error *ngIf="myForm.controls['mTran'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>E</mat-label>
+      <mat-select formControlName="e">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+      </mat-select>
+      <mat-error *ngIf="myForm.controls['e'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="last-row">
+    <mat-form-field appearance="fill">
+      <mat-label>T ins (secondes)</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        required
+        formControlName="tIns"
+        type="number"
+      />
+      <mat-error *ngIf="myForm.controls['tIns'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Pénalités</mat-label>
+      <textarea formControlName="penalty" matInput></textarea>
+      <mat-error *ngIf="myForm.controls['penalty'].errors?.['required']">{{
+        getErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+    <div><div></div></div>
+  </div>
+  <br />
+  <button mat-raised-button type="reset" (click)="addInfo()">Ajouter</button>
+</form>
