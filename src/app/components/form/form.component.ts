@@ -1,9 +1,17 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   Validators,
   FormGroup,
+  FormGroupDirective,
+  NgForm,
 } from '@angular/forms';
 import { FormValueInterface } from 'src/app/interface/form-value-interface';
 import { DataHandlerService } from 'src/app/services/data-handler.service';
@@ -15,6 +23,8 @@ import * as uuid from 'uuid';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
+  @ViewChild('formDirective') private formDirective!: NgForm;
+
   public group = new FormControl('', Validators.required);
   public myForm!: FormGroup;
   constructor(
@@ -64,6 +74,8 @@ export class FormComponent implements OnInit {
       };
       this.dataHandler.formValue = form;
       await this.dataHandler.addData(form);
+      this.formDirective.resetForm();
+      this.myForm.reset();
     }
   }
 }

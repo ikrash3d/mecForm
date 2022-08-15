@@ -1,13 +1,8 @@
-<form [formGroup]="myForm" novalidate onsubmit="">
+<form [formGroup]="myForm" onsubmit="addInfo()" #formDirective="ngForm">
   <div class="row">
     <mat-form-field appearance="fill">
       <mat-label>Groupe</mat-label>
-      <input
-        matInput
-        placeholder="pat@example.com"
-        required
-        formControlName="group"
-      />
+      <input matInput placeholder="Groupe 3" required formControlName="group" />
       <mat-error *ngIf="myForm.controls['group'].errors?.['required']">{{
         getErrorMessage()
       }}</mat-error>
@@ -17,7 +12,7 @@
       <mat-label>Équipe</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
+        placeholder="Équipe 102"
         required
         formControlName="team"
       />
@@ -41,10 +36,10 @@
       <mat-label>Distance (cm)</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
         required
         formControlName="distance"
         type="number"
+        placeholder="12"
       />
       <mat-error *ngIf="myForm.controls['distance'].errors?.['required']">{{
         getErrorMessage()
@@ -108,7 +103,7 @@
       <mat-label>T es (secondes)</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
+        placeholder="12"
         required
         formControlName="tEs"
         type="number"
@@ -133,12 +128,7 @@
   <div class="row">
     <mat-form-field appearance="fill">
       <mat-label>Z</mat-label>
-      <input
-        matInput
-        placeholder="pat@example.com"
-        required
-        formControlName="z"
-      />
+      <input matInput placeholder="2" required formControlName="z" />
       <mat-error *ngIf="myForm.controls['z'].errors?.['required']">{{
         getErrorMessage()
       }}</mat-error>
@@ -159,7 +149,7 @@
       <mat-label>M prot (grammes)</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
+        placeholder="12"
         required
         formControlName="mProt"
         type="number"
@@ -173,7 +163,7 @@
       <mat-label>M tran (grammes)</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
+        placeholder="12"
         required
         formControlName="mTran"
         type="number"
@@ -202,7 +192,7 @@
       <mat-label>T ins (secondes)</mat-label>
       <input
         matInput
-        placeholder="pat@example.com"
+        placeholder="12"
         required
         formControlName="tIns"
         type="number"
@@ -222,5 +212,5 @@
     <div><div></div></div>
   </div>
   <br />
-  <button mat-raised-button type="reset" (click)="addInfo()">Ajouter</button>
+  <button mat-raised-button type="submit" (click)="addInfo()">Ajouter</button>
 </form>

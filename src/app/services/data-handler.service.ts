@@ -56,9 +56,6 @@ export class DataHandlerService {
           .collection('data')
           .doc(documentId)
           .delete()
-          .then((res) =>
-            console.log(`Document with ${documentId} was successfully deleted`)
-          )
           .catch((error) => {
             console.log(
               `An error with ${documentId} happened. Please try again`
