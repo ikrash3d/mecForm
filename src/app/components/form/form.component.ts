@@ -1,16 +1,9 @@
-import {
-  Component,
-  EventEmitter,
-  OnInit,
-  Output,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   Validators,
   FormGroup,
-  FormGroupDirective,
   NgForm,
 } from '@angular/forms';
 import { FormValueInterface } from 'src/app/interface/form-value-interface';
